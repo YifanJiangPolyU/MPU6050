@@ -1,0 +1,19 @@
+
+###################################
+#    source code description      #
+###################################
+
+main.c
+	contains main function
+
+i2c.h / .c
+	define functions for i2c operation
+
+mpu6050_reg.h
+	defines register addresses of mpu6050
+
+mpu6050.h / .c
+	define functions to operate mpu6050
+
+uart.h / .c
+	define functions to operate UART interface, for communication with PC
