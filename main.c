@@ -118,8 +118,8 @@ for(;;){
 	
 	uart_putchar('\n');
 	_delay_ms(10);
-	uart_putdouble(phi_prev); //phi
-	uart_putdouble(theta_prev); //theta	
+	uart_putdouble(phi_prev); //phi, row
+	uart_putdouble(theta_prev); //theta, pitch	
 	uart_putdouble(dt);
 	//_delay_ms(10);
 		
