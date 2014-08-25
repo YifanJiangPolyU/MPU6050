@@ -1,7 +1,6 @@
 /*
-	send a frame of data when timer compare match
-	prupose is to achieve more accurate timing of frames, 
-	and hence better state (orientation) estimation
+	Jiang Yifan
+	August 2014
 */
 
 
