@@ -17,3 +17,6 @@ mpu6050.h / .c
 
 uart.h / .c
 	define functions to operate UART interface, for communication with PC
+
+python/
+	contains a piece of code in python to read euler angles from the IMU and visualize it (needs matplotlib and pySerial)
