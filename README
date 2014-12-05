@@ -1,4 +1,8 @@
 
+This repository contains C codes for AVR ATMega328P microcontrollers to communitcate with MPU6050 3-axis gyro + 3-axis accelerometer IMU. Computation of orientation is done on-chip, and result is streamed out through UART as row and pitch angle values. 
+
+Might work on other AVR ATMega family chips, need to change hardware initialization codes. 
+
 ###################################
 #    source code description      #
 ###################################
