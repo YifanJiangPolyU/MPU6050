@@ -1,6 +1,3 @@
-# read accel from mpu6050 and estimate orientation
-# making use of differential transformation matrix
-
 
 import serial
 import time
@@ -21,7 +18,7 @@ s0 = serial.Serial(port, baud, timeout = 0.5, rtscts=True, dsrdtr=True);
 T = np.array([ [1.,0.,0.],[0.,1.,0.],[0.,0.,1.] ])
 
 # time step
-dt = 0.02 
+dt = 0.02
 
 
 # initiate plot
@@ -43,9 +40,9 @@ cal_x=[]
 cal_y=[]
 cal_z=[]
 while i<99:
-	s0.flush()   
+	s0.flush()
 	c = s0.read(1)
-    
+
 	if len(c)>0:
       	    if ord(c)==10:
 		res_accel_X = np.array(s0.read(2))
@@ -68,9 +65,9 @@ i = 0
 
 
 while 1:
-	s0.flush()   
+	s0.flush()
 	c = s0.read(1)
-    
+
 	if len(c)>0:
       	    if ord(c)==10:
 
@@ -106,7 +103,7 @@ while 1:
 		lineX.set_3d_properties([0., np.sin(theta)*np.cos(phi)])
 		lineY.set_3d_properties([0., -1.*np.sin(phi)])
 		lineZ.set_3d_properties([0.,np.cos(phi)*np.cos(theta)])
-		
+
 		#accX.set_ydata(cal_x)
 		#accY.set_ydata(cal_y)
 		#accZ.set_ydata(cal_z)
@@ -114,7 +111,7 @@ while 1:
 		fig.canvas.draw()
 		#fig2.canvas.draw()
 		i = 0
-        
+
 
 	if i>5:
 		print("wrong")

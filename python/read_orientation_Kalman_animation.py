@@ -1,5 +1,3 @@
-# improved python program, robust receiver
-# will not get stuck due to accidental miss-counts
 
 import serial
 import time
@@ -31,9 +29,9 @@ lineY, = ax.plot([0.,0.],[0.,-1.],[0.,0.],'g-',linewidth=2.0)
 lineZ, = ax.plot([0.,0.],[0.,0.],[0.,-1.],'b-',linewidth=2.0)
 
 while 1:
-	s0.flush()   
+	s0.flush()
 	c = s0.read(1)
-    
+
 	if len(c)>0:
       	    if ord(c)==10:
 
@@ -46,7 +44,7 @@ while 1:
 		dt = dt.view(np.float32)
 		#xxx = [ord(k) for k in dt]
 		#res = res * 9.8 / 65536
-	
+
 		#update plot with new data
 		lineX.set_data([0., np.cos(theta)],[0., np.sin(theta)*np.sin(phi)])
 		lineY.set_data([0., 0.],[0., np.cos(phi)])

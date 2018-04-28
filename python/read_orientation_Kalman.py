@@ -1,5 +1,3 @@
-# improved python program, robust receiver
-# will not get stuck due to accidental miss-counts
 
 import serial
 import time
@@ -25,8 +23,8 @@ pitch = []
 i=0
 while len(row)<99:
 	s0.flush()
-	c = s0.read(1)  
-	
+	c = s0.read(1)
+
 	if len(c)>0:
 	    if ord(c)==10:
 		phi = np.array(s0.read(4))
@@ -43,7 +41,7 @@ while len(row)<99:
 
 		buff= []
 		count = 0
-        
+
 
 
 # initiate plot
@@ -59,9 +57,9 @@ i = 0
 
 
 while 1:
-	s0.flush()   
+	s0.flush()
 	c = s0.read(1)
-    
+
 	if len(c)>0:
       	    if ord(c)==10:
 
@@ -74,7 +72,7 @@ while 1:
 		dt = dt.view(np.float32)
 		#xxx = [ord(k) for k in dt]
 		#res = res * 9.8 / 65536
-	
+
 		#update plot with new data
 		row = row[1:]
 		pitch = pitch[1:]
