@@ -3,9 +3,7 @@ This repository contains C codes for AVR ATMega328P microcontrollers to communit
 
 Might work on other AVR ATMega family chips, need to change hardware initialization codes. 
 
-###################################
-#    source code description      #
-###################################
+## Source files description ##
 
 main.c
 	contains main function
